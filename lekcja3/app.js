@@ -55,11 +55,4 @@ document.querySelector("#zad8").addEventListener("click", function(){
     // }
 })
 
-//zadanie 9
-document.querySelector("#zad9").addEventListener("click", function(){
-    let randomColor = Math.floor(Math.random()*16777215).toString(16).toUpperCase();
-    let bgColor =  "#" + randomColor
-    document.querySelector("#zadanie9 textarea").innerText = bgColor
-    document.querySelector("#zadanie9 textarea").style.backgroundColor = bgColor
-})
 
