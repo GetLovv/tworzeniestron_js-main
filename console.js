@@ -1,0 +1,8 @@
+console.log("dowolny tekst", 404)
+console.log(window)
+console.table(["zero", "jeden", "dwa"])
+console.group("bulbulator")
+    console.log("1 dowolny tekst")
+    console.log("2 dowolny tekst")
+    console.log("3 dowolny tekst")
+console.groupEnd()
