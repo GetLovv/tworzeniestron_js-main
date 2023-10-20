@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 20px;
+}
+table{
+    border-collapse: collapse;
+}
+td {
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.gold {
+    background-color: gold;
+}
+.silver {
+    background-color: silver;
+}
+.khaki {
+    background-color: khaki;
+}
+.peru{
+    background-color: peru;
+}
