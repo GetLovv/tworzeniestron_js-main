@@ -4,52 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkboxy</title>
-    <style>
-        * {
-            margin: 0;
-        }
-        .main {
-            display: flex;
-            justify-content: space-between;
-            width: 50vh;
-            height: 5vh;
-            border: 1px solid black;
-            background-color: antiquewhite;
-            
-        }
-    </style>
-    <script>
-        function limitCheckboxSelection() {
-            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-            let checkedCount = 0;
-
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', () => {
-                    if (checkbox.checked) {
-                        checkedCount++;
-                        if (checkedCount > 2) {
-                            checkbox.checked = false;
-                            checkedCount--;
-                        }
-                    } else {
-                        checkedCount--;
-                    }
-                });
-            });
-        }
-    </script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body onload="limitCheckboxSelection()">
     <div class="main">
-            <label>
-                <input type="checkbox" name="option" value="dobrze"> Dobrze
-            </label><br>
-            <label>
-                <input type="checkbox" name="option" value="tanio"> Tanio
-            </label><br>
-            <label>
-                <input type="checkbox" name="option" value="szybko"> Szybko
-            </label><br>
+        <label class="checkbox-label"><input type="checkbox" class="checkbox" value="checkbox1"> Dobrze</label>
+        <label class="checkbox-label"><input type="checkbox" class="checkbox" value="checkbox2"> Tanio</label>
+        <label class="checkbox-label"><input type="checkbox" class="checkbox" value="checkbox3"> Szybko</label>
     </div>
 </body>
+<script src="app.js"></script>
 </html>
