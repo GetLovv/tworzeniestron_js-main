@@ -1,0 +1,42 @@
+* {
+<<<<<<< HEAD
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#buttons{
+    height: 5vh;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-around
+}
+#radioo{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#lightbulb{
+    display: flex;
+    justify-content: center;
+}
+#wlacznik{
+    height: 5vh;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-around
+=======
+    margin: 0;
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    width: 50vh;
+    height: 5vh;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    
+>>>>>>> 947940da6bda94571126d82cfade112df25da92f
+}
