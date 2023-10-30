@@ -1,0 +1,10 @@
+#rectangle {
+    position: relative;
+    height: 0px;
+    width: 0px;
+    background-color: #ffffff;
+}
+#info {
+    position: relative;
+    top: 10px;
+}

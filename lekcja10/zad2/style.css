@@ -1,0 +1,12 @@
+table {
+    border-collapse: collapse;
+    width: 50vh;
+}
+td, th {
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    border-top: 1px solid brown;
+    border-bottom: 1px solid brown;
+    padding: 8px;
+
+}

@@ -1,0 +1,28 @@
+p {
+    font-size: 16px;
+    font-family: Arial;
+    color: #333;
+    margin-bottom: 10px;
+    background-color: lightsteelblue;
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
+    padding: 10px;
+}
+button {
+    font-size: 16px;
+    font-family: Arial;
+    background-color: lightsteelblue;
+    color: darkblue;
+    padding: 10px 20px;
+    border-top: 2px solid darkblue;
+    border-bottom: 2px solid darkblue;
+    border-left: none;
+    border-right: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #3e8e41;
+}
+h1 {
+    text-shadow: 2px 2px #888888;
+}
