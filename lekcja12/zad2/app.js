@@ -1,6 +1,12 @@
 var month = Math.floor(Math.random() * 15) + 1;
 
 document.write('<h1>' + month + '</h1>');
+const refreshButton = document.createElement("button");
+refreshButton.innerHTML = "Odśwież stronę";
+refreshButton.onclick = function() {
+  location.reload();
+};
+document.body.appendChild(refreshButton);
 
 switch(month) {
     case 1:
