@@ -1,4 +1,36 @@
 * {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+#buttons{
+    height: 5vh;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-around
+}
+#radioo{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+#lightbulb{
+    display: flex;
+    justify-content: center;
+}
+#wlacznik{
+    height: 5vh;
+    background-color: crimson;
+    display: flex;
+    justify-content: space-around
+=======
+>>>>>>> 94c723bc89e0c7c33411cf8b46d3a57b05850ab3
     margin: 0;
 }
 .main {
@@ -9,4 +41,8 @@
     border: 1px solid black;
     background-color: antiquewhite;
     
+<<<<<<< HEAD
+=======
+>>>>>>> 947940da6bda94571126d82cfade112df25da92f
+>>>>>>> 94c723bc89e0c7c33411cf8b46d3a57b05850ab3
 }
