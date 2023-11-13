@@ -1,95 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .main {
-            text-align: center; 
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>skrzynki</title>
+  <style>
 
-        .skrzynia {
-            width: 100px;
-            height: 100px;
-            margin: 10px;
-            padding: 10px;
-            display: inline-table; 
-            vertical-align: top;
-        }
-
-        .skrzynia h2 {
-            margin-top: 0; 
-        }
-
-        .kolorki {
-            width: 100px;
-            height: 100px;
-            display: block; 
-        }
-
-        table {
-            width: 100%;
-            height: 100%;
-            table-layout: fixed;
-            border-collapse: collapse;
-        }
-
-        td {
-            width: 100px;
-            height: 49px;
-            border-bottom: 5px solid brown;
-            border-left: 5px solid brown;
-            border-right: 5px solid brown;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    table {
+      border-collapse: collapse;
+      margin: 0;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      padding: 0;
+      border: 2px solid brown;
+      border-top: none;
+    }
+    td, tr {
+      border: 2px solid brown;
+      padding: 0;
+      margin: 0;
+      border-top: 0;
+      width: 100px;
+      height: 100px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      margin: 0;
+      border: none;
+    }
+  </style>
 </head>
 <body>
+<div>
+<table>
+  <caption>Skrzynka #1</caption>
+  <tr>
+    <td id="1" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="czerwony1" src="czerwony.png" draggable="true" ondragstart="drag(event)"></td>
+    <td id="2" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="zielony" src="zielony.png" draggable="true" ondragstart="drag(event)"></td>
+    <td id="3" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="zolty" src="zolty.png" draggable="true" ondragstart="drag(event)"></td>
+    <td id="4" ondrop="drop(event)" ondragover="allowDrop(event)"><img id="czerwony2" src="fioletowy.png" draggable="true" ondragstart="drag(event)"></td>
+  </tr>
+</table>
+</div>
+<div>
+<table>
+  <caption>Skrzynka #2</caption>
+  <tr>
+    <td id="5" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <td id="6" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <td id="7" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <td id="8" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+  </tr>
+</table>
 
-    <div class="main">
-        <div id="skrzynka1">
-            <h2>Skrzynka #1</h2>
-            <table>
-                <tr>
-                    <td id="1"><img class="kolorki" draggable="true" ondragstart="drag(event)" src="czerwony.png"></td>
-                    <td id="2"><img class="kolorki" src="zielony.png"></td>
-                    <td id="3"><img class="kolorki" src="zolty.png"></td>
-                    <td id="4"><img class="kolorki" src="czerwony.png"></td>
-                </tr>
-            </table>
-        </div>
-
-        <div id="skrzynka2">
-            <h2>Skrzynka #2</h2>
-            <table>
-                <tr>
-                    <td id="5"></td>
-                    <td id="6"></td>
-                    <td id="7"></td>
-                    <td id="8"></td>
-                </tr>
-            </table>
-        </div>
-    </div>
-
-    <script>
-
-        function allowDrop(ev) {
-  ev.preventDefault();
-}
-
-function drag(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-  ev.preventDefault();
-  var data = ev.dataTransfer.getData("text");
-  ev.target.appendChild(document.getElementById(data));
-}
-    </script>
-
+</div>
+<script src="app.js"></script>
 </body>
 </html>
+
+
