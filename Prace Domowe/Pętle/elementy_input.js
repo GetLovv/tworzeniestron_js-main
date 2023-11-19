@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
   var form = document.getElementById('myForm');
 
   for (var i = 1; i <= 100; i++) {
@@ -17,4 +16,3 @@ document.addEventListener('DOMContentLoaded', function () {
       form.appendChild(document.createElement('br'));
     }
   }
-});
