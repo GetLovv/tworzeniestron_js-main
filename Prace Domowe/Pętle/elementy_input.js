@@ -1,12 +1,12 @@
-  var form = document.getElementById('myForm');
+  var form = document.getElementById('Form');
 
   for (var i = 1; i <= 100; i++) {
     var input = document.createElement('input');
     input.type = 'text';
 
-    var id = (i < 10) ? 'input_0' + i : 'input_' + i;
+    var id = (i < 5) ? 'inputson' + i : 'inputek' + i;
     input.id = id;
-    input.name = 'input_' + i;
+    input.name = 'inputek' + i;
     input.placeholder = 'Element numer ' + i;
     input.style.margin = '10px';
     input.style.boxShadow = '5px 5px 5px lightblue';

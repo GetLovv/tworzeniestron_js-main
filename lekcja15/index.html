@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3>Miara kąta między wskazówkami zegara</h3>
+    <div class="frame">
+        <p>Miarę konta między wskazówką minutową a godzinową można obliczyć według wzoru</p>
+        <p><img src="ebebe.bmp" alt="wzór"></p>
+    </div>
+    <div class="frame input_output">
+        <label for="hours_range">Godziny [0, 11]</label>
+        <br>
+        <input id="hours_range" min="0" max="11" name="hours_range" type="range" value="0">
+        <br>
+        <output id="hours_output">0</output>
+    </div>
+<div class="frame input_output">
+    <label for="minutes_range">Minuty [0, 60]</label>
+    <br>
+    <input id="minutes_range" min="0" max="60" name="minutes_range" type="range" value="0">
+    <br>
+    <output id="minutes_output">0</output>
+</div>
+<div id="clock_body">
+    <div id="hour" class="hand" style="transform: rotate(0deg);"></div>
+    <div id="minute" class="hand" style="transform: rotate(0deg);"></div>
+</div>
+<div class="frame input_output">
+    <label for="angle">Kąt</label>
+    <br>
+    <br>
+    <output id="angle">0*</output>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

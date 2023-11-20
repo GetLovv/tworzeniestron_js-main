@@ -1,0 +1,41 @@
+.frame{
+    border: 2px solid grey;
+    border-radius: 20px;
+    padding: 20px;
+}
+div.input_output{
+    display: inline-block;
+    height: 60px;
+    width: 130px;
+}
+#clock_body{
+    width: 20rem;
+    height: 20rem;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+#minute{
+    width: 2.5px;
+    height: 7.5rem;
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    background-color: blue;
+    transform-origin: bottom;
+}
+#hour{
+    width: 5px;
+    height: 4rem;
+    position: absolute;
+    top: 6rem;
+    left: 50%;
+    background-color: brown;
+    transform-origin: bottom;
+}
+ output{
+    border-bottom: 1px solid grey;
+    width: 100%;
+    display:inline-block;
+    text-align: right;
+}
