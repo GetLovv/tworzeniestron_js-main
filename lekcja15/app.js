@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const hours = parseInt(hoursRange.value);
         const minutes = parseInt(minutesRange.value);
 
-        const hoursAngle = (hours * 30) + (minutes * 0.5);
+        const hoursAngle = (hours * 30) - (minutes * 0.5);
         const minutesAngle = minutes * 6;
         const angle = Math.abs(hoursAngle - minutesAngle);
 
