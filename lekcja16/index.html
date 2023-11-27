@@ -1,37 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>999</title>
+    <title>liczby palindromicznych</title>
     <style>
-        .dziesiatki {
-            color: red;
+        #main {
+            width: 100vh;
         }
-        fieldset{}
+        button {
+            
+        }
     </style>
 </head>
 <body>
-
-    <fieldset> 
-        <p1>Znajdź liczby palindromiczne, czyli takie, które przy czytaniu od lewej do prawej i odwrotnie są jednakowe</p1>
+    <div id="main">
+    <fieldset>
+        <p1>Znajdź liczby palindomiczne, czyli takie, które przy czytaniu od lewej do prawej i odwrotnie są jednakowe.</p1>
         <br>
-        <input type="radio" id="dwucyfrowe">
+        <input type="radio" name="ilucyfrowe" value="2" id="digits-2">
         <label for="dwucyfrowe">dwucyfrowe</label>
-        <input type="radio" id="trzycyfrowe">
+        <input type="radio" name="ilucyfrowe" value="3" id="digits-3">
         <label for="trzycyfrowe">trzycyfrowe</label>
-        <input type="radio" id="czterocyfrowe">
+        <input type="radio" name="ilucyfrowe" value="4" id="digits-4">
         <label for="czterocyfrowe">czterocyfrowe</label>
-        <input type="radio" id="pięciocyfrowe">
+        <input type="radio" name="ilucyfrowe" value="5" id="digits-5">
         <label for="pięciocyfrowe">pięciocyfrowe</label>
-        <button id="przycisk">Znajdź</button>
-            <fieldset>
-                <legend>Liczby palindormicze</legend>
-                    <div id="czyfry"></div>
-
-            </fieldset>
+        <button onclick="generuj()">Znajdź</button>
+        <fieldset style="border: 1px dashed black;">
+            <legend>liczby palindormiczne </legend>
+        <span id="output"></span>
     </fieldset>
+    <div id="howmuch"></div>
+    </fieldset>
+    </div>
+    
+    
+    <script>
+function generuj() {
+    var cyfry = document.querySelector('input[name="ilucyfrowe"]:checked').value;
+    var min = Math.pow(10, cyfry - 1);
+    var max = Math.pow(10, cyfry) - 1;
+    var output = document.getElementById("output");
+    const sethowmuch = document.getElementById("howmuch");
+    sethowmuch.innerHTML = '';
+    let count = 0;
+    output.innerHTML = "";
+    for (var i = min; i <= max; i++) {
+        if (Palindormiczne(i)) {
+            output.innerHTML += i + ", " ;
+            count++;
+        }
+    }
 
-<script src="app.js"></script>
+
+function Palindormiczne(n) {
+    var s = n.toString();
+    for (var i = 0; i < s.length / 2; i++) {
+        if (s[i] != s[s.length - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+sethowmuch.innerHTML += '<br>Liczba znalezionych liczb palindromicznych jest' + ' ' + '<b><span>' + count + '</span></b>' + '.';
+}
+    </script>
 </body>
 </html>
