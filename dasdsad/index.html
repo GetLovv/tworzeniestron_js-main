@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kalkulator</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: auto;
+		}
+		td {
+			padding: 10px;
+			border: 1px solid black;
+			text-align: center;
+			font-size: 20px;
+			cursor: pointer;
+		}
+		input[type="text"] {
+			width: 100%;
+			height: 50px;
+			font-size: 20px;
+			padding: 10px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+		}
+		input[type="button"] {
+			width: 100%;
+			height: 50px;
+			font-size: 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			cursor: pointer;
+		}
+		input[type="button"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<td colspan="5"><input type="text" id="calculation" readonly></td>
+		</tr>
+		<tr>
+			<td colspan="5"><input type="text" id="result" readonly></td>
+		</tr>
+		<tr>
+			<td onclick="insert('1')">1</td>
+			<td onclick="insert('2')">2</td>
+			<td onclick="insert('3')">3</td>
+			<td onclick="insert('/')">/</td>
+			<td onclick="clearResult()">C</td>
+		</tr>
+		<tr>
+			<td onclick="insert('4')">4</td>
+			<td onclick="insert('5')">5</td>
+			<td onclick="insert('6')">6</td>
+			<td onclick="insert('*')">*</td>
+			<td onclick="clearResult()"></td>
+		</tr>
+		<tr>
+			<td onclick="insert('7')">7</td>
+			<td onclick="insert('8')">8</td>
+			<td onclick="insert('9')">9</td>
+			<td onclick="insert('-')">-</td>
+			<td onclick="clearResult()"></td>
+		</tr>
+		<tr>
+			<td onclick="insert('0')">0</td>
+			<td onclick="insert('+')">+</td>
+			<td colspan="2"><input type="button" value="=" onclick="calculateResult()"></td>
+			<td onclick="clearResult()"></td>
+		</tr>
+	</table>
+	<script>
+		function insert(value) {
+			var calculationField = document.getElementById('calculation');
+			if (calculationField.value.length < 3) {
+				calculationField.value += value;
+			}
+		}
+
+		function clearResult() {
+			document.getElementById('calculation').value = '';
+			document.getElementById('result').value = '';
+		}
+
+		function calculateResult() {
+			var displayValue = document.getElementById('calculation').value;
+			if (displayValue) {
+				try {
+					var result = eval(displayValue);
+					document.getElementById('result').value = result;
+				} catch (error) {
+					document.getElementById('result').value = 'Error';
+				}
+			}
+		}
+	</script>
+</body>
+</html>
