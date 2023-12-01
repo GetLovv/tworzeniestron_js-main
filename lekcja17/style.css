@@ -1,43 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
-.calculator {
-    padding: 10px;
-    border-radius: 1em;
-    height: 380px;
-    width: 400px;
+table {
+    border-collapse: collapse;
     margin: auto;
-    background-color: #191b28;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    width: 50vh;
+    height: 50vh;
 }
 
-.display-box {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #dcdbe1;
-    border: solid black 0.5px;
-    color: black;
-    border-radius: 5px;
+td {
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+input[type="text"] {
     width: 100%;
-    height: 65%;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-top: 2px black solid;
+    border-left: 2px black solid;
+    border-bottom: 2px rgb(53, 53, 53) solid;
+    border-right: 2px rgb(53, 53, 53) solid;
 }
 
-#btn {
-    background-color: #fb0066;
+input[type="button"] {
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
 }
 
-input[type=button] {
-    font-family: 'Orbitron', sans-serif;
-    background-color: #64278f;
+#cyfry {
+    background-color: rgb(53, 53, 53);
     color: white;
-    border: solid black 0.5px;
-    width: 100%;
     border-radius: 5px;
-    height: 70%;
-    outline: none;
+    border-top: 3px solid grey;
+    border-left: 3px solid grey;
+    border-bottom: 3px solid rgb(53, 53, 53);
+    border-right: 3px solid rgb(53, 53, 53);
 }
 
-input:active[type=button] {
-    background: #e5e5e5;
-    -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-    box-shadow: inset 0px 0px 5px #c1c1c1;
+#operator {
+    background-color: rgb(201, 201, 201);
+    border-top: 3px solid grey;
+    border-left: 3px solid grey;
+    border-bottom: 3px solid rgb(53, 53, 53);
+    border-right: 3px solid rgb(53, 53, 53);
+    border-radius: 5px;
+
+}
+
+#detonator {
+    background-color: crimson;
+    border-top: 3px solid grey;
+    border-left: 3px solid grey;
+    border-bottom: 3px solid rgb(53, 53, 53);
+    border-right: 3px solid rgb(53, 53, 53);
+    border-radius: 5px;
+    color: white;
+
+}
+#kombinacje_alpejskie{
+    background-color: rgb(156, 156, 156);
 }

@@ -1,96 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Kalkulator</title>
-	<style>
-		table {
-			border-collapse: collapse;
-			margin: auto;
-		}
-		td {
-			padding: 10px;
-			border: 1px solid black;
-			text-align: center;
-			font-size: 20px;
-			cursor: pointer;
-		}
-		input[type="text"] {
-			width: 100%;
-			height: 50px;
-			font-size: 20px;
-			padding: 10px;
-			margin-bottom: 10px;
-			box-sizing: border-box;
-		}
-		input[type="button"] {
-			width: 100%;
-			height: 50px;
-			font-size: 20px;
-			background-color: #4CAF50;
-			color: white;
-			border: none;
-			cursor: pointer;
-		}
-		input[type="button"]:hover {
-			background-color: #3e8e41;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<table>
+    <table>
         <tr>
-			<td colspan="5"><input type="text" id="calculation" ></td>
-		</tr>
-		<tr>
-			<td colspan="5"><input type="text" id="result" ></td>
-		</tr>
-		<tr>
+            <td colspan="5"><input type="text" id="kombinacje_alpejskie" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="5"><input type="text" id="wynikmalegoazjaty" readonly></td>
+        </tr>
+        <tr>
             <td rowspan="3"></td>
-			<td onclick="insert('7')">7</td>
-			<td onclick="insert('8')">8</td>
-			<td onclick="insert('9')">9</td>
-			<td onclick="insert('/')">/</td>
-		</tr>
-		<tr>
-			<td onclick="insert('4')">4</td>
-			<td onclick="insert('5')">5</td>
-			<td onclick="insert('6')">6</td>
-			<td onclick="insert('*')">*</td>
-		</tr>
-		<tr>
-			<td onclick="insert('1')">1</td>
-			<td onclick="insert('2')">2</td>
-			<td onclick="insert('3')">3</td>
-			<td onclick="insert('-')">-</td>
-		</tr>
-		<tr>
-            <td onclick="clearResult()">C</td>
-			<td onclick="insert('0')">0</td>
-            <td colspan="2"><input type="button" value="=" onclick="calculateResult()"></td>
-			<td onclick="insert('+')">+</td>
-		</tr>
-	</table>
-	<script>
-    function insert(value) {
-        document.getElementById('calculation').value += value;
-    }
+            <td onclick="zapodaj('7')"><input id="cyfry" type="button" value="7"></td>
+            <td onclick="zapodaj('8')"><input id="cyfry" type="button" value="8"></td>
+            <td onclick="zapodaj('9')"><input id="cyfry" type="button" value="9"></td>
+            <td onclick="zapodaj('/')"><input id="operator" type="button" value="&#247;"></td>
+        </tr>
+        <tr>
+            <td onclick="zapodaj('4')"><input id="cyfry" type="button" value="4"></td>
+            <td onclick="zapodaj('5')"><input id="cyfry" type="button" value="5"></td>
+            <td onclick="zapodaj('6')"><input id="cyfry" type="button" value="6"></td>
+            <td onclick="zapodaj('*')"><input id="operator" type="button" value="&#215;"></td>
+        </tr>
+        <tr>
+            <td onclick="zapodaj('1')"><input id="cyfry" type="button" value="1"></td>
+            <td onclick="zapodaj('2')"><input id="cyfry" type="button" value="2"></td>
+            <td onclick="zapodaj('3')"><input id="cyfry" type="button" value="3"></td>
+            <td onclick="zapodaj('-')"><input id="operator" type="button" value="&#8722;"></td>
+        </tr>
+        <tr>
+            <td onclick="wybuchnij()"><input id="detonator" type="button" value="C"></td>
+            <td onclick="zapodaj('0')"><input id="cyfry" type="button" value="0"></td>
+            <td colspan="2"><input id="operator" type="button" value="=" onclick="malyazjata()"></td>
+            <td onclick="zapodaj('+')"><input id="operator" type="button" value="&#43;"></td>
+        </tr>
+    </table>
 
-    function clearResult() {
-        document.getElementById('calculation').value = '';
-        document.getElementById('result').value = '';
-    }
-
-    function calculateResult() {
-        var displayValue = document.getElementById('calculation').value;
-        if (displayValue) {
-            try {
-                var result = eval(displayValue);
-                document.getElementById('result').value = result;
-            } catch (error) {
-                document.getElementById('result').value = 'Error';
-            }
-        }
-    }
-	</script>
+    <script src="app.js"></script>
 </body>
 </html>

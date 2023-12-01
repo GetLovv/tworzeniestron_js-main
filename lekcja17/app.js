@@ -1,16 +1,20 @@
-// This function clears all the values
-function clearScreen() {
-    document.getElementById("result").value = "";
+function zapodaj(value) {
+    document.getElementById('kombinacje_alpejskie').value += value;
 }
- 
-// This function displays the values
-function display(value) {
-    document.getElementById("result").value \\+= value;
+
+function wybuchnij() {
+    document.getElementById('kombinacje_alpejskie').value = '';
+    document.getElementById('wynikmalegoazjaty').value = '';
 }
- 
-// This function evaluates the expression and returns the result
-function calculate() {
-    var p = document.getElementById("result").value;
-    var q = eval(p);
-    document.getElementById("result").value = q;
+
+function malyazjata() {
+    var displayValue = document.getElementById('kombinacje_alpejskie').value;
+    if (displayValue) {
+        try {
+            var wynikmalegoazjaty = eval(displayValue);
+            document.getElementById('wynikmalegoazjaty').value = wynikmalegoazjaty;
+        } catch (error) {
+            document.getElementById('wynikmalegoazjaty').value = 'Error';
+        }
+    }
 }
